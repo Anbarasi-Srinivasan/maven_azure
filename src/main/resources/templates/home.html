@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+</head>
+<body>
+
+<h2>Home Page</h2>
+
+<form action="/greet" method="post">
+    <input type="text" name="name" placeholder="Enter name" required/>
+    <button type="submit">Submit</button>
+</form>
+
+<!-- ✅ Show error -->
+<p th:if="${error}" th:text="${error}" style="color:red;"></p>
+
+</body>
+</html>
